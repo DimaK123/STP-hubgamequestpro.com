@@ -1,0 +1,40 @@
+.header {
+  padding-block: 10px;
+
+  background-color: #10220F;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    @include figure(60px);
+
+    background-image: url('../images/icons/page__logo.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &__burger-menu {
+    display: none;
+    @include figure(40px);
+
+    background-image: url('../images/icons/burger-icon.svg');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include onMobile {
+      display: block;
+    }
+  }
+
+  &__nav {
+    @include onMobile {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.photo {
+  @include section-padding-top;
+
+  &__section-title {
+    margin-bottom: 45px;
+  }
+
+  &__slider {
+    margin-bottom: 60px;
+
+    @include onMobile {
+      &:first-of-type {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  &__swiper-slide {
+    width: min-content;
+  }
+
+  &__swiper-button {
+    @include figure(65px);
+
+    @include onMobile {
+      display: none;
+    }
+
+    &::after {
+      color: #fff;
+    }
+
+    &.swiper-button-prev {
+      left: 20px;
+    }
+
+    &.swiper-button-next {
+      right: 20px;
+    }
+  }
+
+
+  &__photo-top {
+    width: 512px;
+    height: 289px;
+
+    object-fit: contain;
+
+    @include onMobile {
+      width: 255px;
+      height: 145px;
+    }
+  }
+
+  &__photo-bottom {
+    width: 326px;
+    height: 407px;
+
+    object-fit: cover;
+
+    @include onMobile {
+      width: 165px;
+      height: 200px;
+    }
+  }
+}

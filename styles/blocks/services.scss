@@ -1,0 +1,151 @@
+.services {
+  &__inner {
+    position: relative;
+  }
+
+  &__decor {
+    position: absolute;
+
+    &--top-left {
+      left: 0;
+      top: -75px;
+
+      @include onMobile {
+        top: -35px;
+
+        width: 135px;
+        height: 240px;
+
+        z-index: 1;
+      }
+    }
+
+    &--top-right {
+      right: 0;
+      top: -25px;
+
+      @include onMobile {
+        display: none;
+      }
+    }
+
+    &--bottom-left {
+      left: 0;
+      bottom: -170px;
+
+      @include onMobile {
+        display: none;
+      }
+    }
+
+    &--bottom-right {
+      right: 0;
+      bottom: 215px;
+
+      @include onMobile {
+        width: 105px;
+        height: 145px;
+
+        bottom: -100px;
+      }
+    }
+  }
+
+  &__section-title {
+    margin-bottom: 30px;
+
+    @include onMobile {
+      margin-bottom: 45px;
+    }
+  }
+
+  &__list-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 38px;
+
+    align-items: center;
+
+    padding: 50px $padding-desktop;
+
+    @include onMobile {
+      padding: 35px $padding-mobile;
+      gap: 25px;
+    }
+    
+    &:nth-child(odd) {
+      background-color: #0000005E;
+    }
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    &:nth-of-type(odd) .services__list-item-img::after {
+      background-image: url('../images/services-leaf-decor-left.avif');
+      left: -90px;
+    }
+
+    &:nth-of-type(even) .services__list-item-img::after {
+      background-image: url('../images/services-leaf-decor-right.avif');
+      right: -90px;
+    }
+
+    &-text {
+      text-align: center;
+      min-width: 556px;
+
+      @include onMobile {
+        min-width: 100%;
+      }
+    }
+
+    h3 {
+      font-size: 24px;
+
+      margin-bottom: 35px;
+
+      @include onMobile {
+        margin-bottom: 25px;
+      }
+    }
+
+    ul {
+      list-style: disc;
+      list-style-position: inside;
+    }
+
+    li {
+      font-size: 20px;
+
+      @include onMobile {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__list-item-img {
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 212px;
+      height: 245px;
+      position: absolute;
+      bottom: -25px;
+      background-repeat: no-repeat;
+
+      @include onMobile {
+        display: none;
+      }
+    }
+
+    img {
+      @include figure(345px);
+      object-fit: cover;
+      border-radius: 30px;
+      border: 5px solid $page-main-text-color;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.section-title {
+  font-weight: 700;
+  font-size: 36px;
+  text-align: center;
+
+  @include onMobile {
+    font-size: 24px;
+  }
+}
