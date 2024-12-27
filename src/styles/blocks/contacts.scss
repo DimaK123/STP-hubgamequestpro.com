@@ -1,0 +1,36 @@
+.contacts {
+  @include section-padding-top;
+  padding-bottom: 45px;
+
+  background-image: url('../images/contacts-bg.avif');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @include onMobile {
+    padding-bottom: 35px;
+  }
+
+  &__inner {
+    color: #fff;
+  }
+
+  &__section-title {
+    margin-bottom: 20px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+
+  &__content-item {
+    text-align: center;
+
+    a {
+      display: block;
+    }
+  }
+}

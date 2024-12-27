@@ -1,0 +1,81 @@
+.accept-cookies {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  padding: 30px;
+
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+
+  background-color: $page-main-color;
+
+  @include onMobile {
+    padding: 35px 25px;
+    gap: 20px;
+  }
+
+  & p {
+    max-width: 960px;
+
+    @include onMobile {
+      text-align: center;
+    }
+  }
+
+  &__action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    @include onMobile {
+      gap: 20px;
+    }
+  }
+
+  &__action-button {
+    padding: 24px 60px;
+    width: 100%;
+    max-width: 340px;
+    height: max-content;
+
+    font-size: inherit;
+    font-weight: 400;
+    line-height: 26px;
+    text-transform: uppercase;
+    text-align: center;
+
+    border-radius: 50px;
+
+    @include onMobile {
+      padding-inline: 50px;
+    }
+
+    &--orange {
+      background-color: $page-orange-color;
+    }
+
+    &--light-green-color {
+      background-color: $page-main-text-color;
+    }
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+  &--fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+  }
+}

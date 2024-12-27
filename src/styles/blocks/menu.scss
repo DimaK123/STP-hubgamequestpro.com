@@ -1,0 +1,19 @@
+.menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: $page-main-color;
+
+  &__close-button {
+    @include figure(40px);
+
+    background-image: url('../images/icons/close-icon.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    top: 20px;
+    right: $padding-mobile;
+  }
+}

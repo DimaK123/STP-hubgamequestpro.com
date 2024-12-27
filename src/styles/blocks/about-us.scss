@@ -1,0 +1,33 @@
+.about-us {
+  @include section-padding-top;
+
+  padding-bottom: 40px;
+
+  @include onMobile {
+    padding-bottom: 50px;
+  }
+
+  &__inner {
+    text-align: center;
+  }
+
+  &__section-title {
+    margin-bottom: 20px;
+
+    @include onMobile {
+      margin-bottom: 35px;
+    }
+  }
+
+  p {
+    max-width: 1100px;
+    padding-inline: 60px;
+    margin: 0 auto;
+
+    @include onMobile {
+      padding-inline: 16px;
+
+      max-width: 330px;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.footer {
+  padding-block: 55px;
+
+  @include onMobile {
+    padding: 50px 0 20px;
+  }
+
+  &__nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: end;
+
+    margin-bottom: 65px;
+
+    @include onMobile {
+      justify-content: center;
+
+      margin-bottom: 40px;
+    }
+  }
+
+  &__nav-link {
+    font-weight: 700;
+    line-height: 22px;
+    text-transform: uppercase;
+
+    @media (min-width: 768px) {
+      &:hover {
+        color: $page-orange-color;
+      }
+    }
+  }
+
+  &__copyright {
+    text-align: center;
+    color: $page-orange-color
+  }
+}

@@ -1,0 +1,34 @@
+.page {
+  scroll-behavior: smooth;
+  transition: all 0.3s ease;
+
+  &__body {
+    font-family: "Veranda", sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    color: $page-main-text-color;
+
+    background-color: $page-main-color;
+  }
+
+  &__header {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+  }
+
+  &__menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 3;
+
+    transform: translateX(-100%);
+
+    &--active {
+      transform: translateX(0);
+    }
+  }
+}

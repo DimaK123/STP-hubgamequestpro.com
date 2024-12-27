@@ -1,0 +1,25 @@
+.nav {
+  &__list {
+    display: flex;
+    gap: 32px;
+
+    &--column {
+      text-align: center;
+      flex-direction: column;
+      }
+  }
+
+  &__link {
+    font-weight: 700;
+    line-height: 22px;
+    text-transform: uppercase;
+
+    &:hover {
+      color: $page-orange-color;
+
+      @include onMobile {
+        color: $page-main-text-color;
+      }
+    }
+  }
+}

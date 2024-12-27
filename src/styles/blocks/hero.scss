@@ -1,0 +1,195 @@
+.hero {
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 25px;
+    gap: 35px;
+
+    position: relative;
+
+    @include onMobile {
+      padding-top: 10px;
+      padding-left: 0;
+    }
+  }
+
+  &__decor {
+    position: absolute;
+    left: -$padding-desktop;
+    z-index: -1;
+
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include onMobile {
+      left: -$padding-mobile;
+    }
+
+    &--top {
+      width: 250px;
+      height: 450px;
+
+      top: -80px;
+
+      background-image: url('../images/top-leaf.avif');
+
+      @include onMobile {
+        width: 115px;
+        height: 210px;
+      }
+    }
+
+    &--bottom {
+      height: 345px;
+      width: 225px;
+
+      bottom: -115px;
+
+      background-image: url('../images/bottom-leaf.avif');
+
+      @include onMobile {
+        display: none;
+      }
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+
+    padding-top: 25px;
+
+    @include onMobile {
+      padding-top: 0;
+    }
+  } 
+
+  &__logo {
+    height: 265px;;
+    width: 170px;
+
+    margin-bottom: 15px;
+
+
+    background-image: url('../images/hero-logo.avif');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @include onMobile {
+      height: 125px;
+      width: 90px;
+
+      margin-bottom: 40px;
+    }
+  }
+
+  &__title {
+    font-size: 40px;
+    font-weight: 700;
+    
+    color: $page-orange-color;
+    margin-bottom: 15px;
+
+    @include onMobile {
+      font-size: 36px;
+
+      padding-inline: 40px;
+
+      margin-bottom: 25px;
+    }
+  }
+
+  p {
+    font-size: 24px;
+
+    margin-bottom: 25px;
+
+    @include onMobile {
+      font-size: 20px;
+    }
+  }
+
+  &__action-button {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #fff;
+
+    padding-block: 15px;
+    min-width: 330px;
+
+    border-radius: 50px;
+
+    background-color: $page-orange-color;
+  }
+
+  &__image-container {
+    flex: 645px;
+    max-width: 645px;
+
+    position: relative;
+
+    @include onMobile {
+      max-width: 280px;
+    }
+
+    &-decor {
+      position: absolute;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      &--top-right {
+        width: 38%;
+        height: 44%;
+
+        top: -1.5%;
+        right: -7.75%;
+
+        background-image: url('../images/hero-main-pic-leaf-top-right.avif');
+        
+        @include onMobile {
+          top: -1.8%;
+          right: -7.86%;
+        }
+      }
+
+      &--bottom-left {
+        width: 38%;
+        height: 34%;
+
+        left: -7.75%;
+        bottom: -3%;
+
+        background-image: url('../images/hero-main-pic-leaf-bottom-left.avif');
+      }
+
+      &--bottom-right {
+        width: 35%;
+        height: 47%;
+
+        right: -16%;
+        bottom: -21%;
+
+        background-image: url('../images/hero-main-pic-leaf-bottom-right.avif');
+        
+        @include onMobile {
+          width: 37.5%;
+          height: 50%;
+
+          bottom: -25%;
+        }
+      }
+    }
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+
+    border-radius: 100%;
+  }
+}
